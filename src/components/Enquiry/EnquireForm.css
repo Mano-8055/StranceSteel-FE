@@ -1,0 +1,182 @@
+.enquire-container {
+  max-width: 850px;
+  margin: 2rem auto;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  border-radius: 12px;
+  overflow: visible; /* allow semicircle to show */
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+/* Top blue bar */
+.enquire-topbar {
+  height: 7px;
+  background: #2118ef;
+  width: 100%;
+  margin-bottom: 0;
+  
+}
+
+/* Light blue half-semicircle behind the form */
+.enquire-container::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 210px;
+  background-color: #e6f1fe; /* Subtle very-light blue */
+  border-radius: 210px 210px 0 0;
+  bottom: 100%;   /* directly above the container */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Responsive: scale down semicircle on tablets and mobile */
+@media (max-width: 900px) {
+  .enquire-container {
+    max-width: 98vw;
+    margin: 1.5rem 1vw;
+  }
+  .enquire-container::before {
+    width: 260px;
+    height: 130px;
+    border-radius: 130px 130px 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .enquire-container {
+    padding-bottom: 1.2rem;
+    border-radius: 8px;
+  }
+  .enquire-container::before {
+    width: 140px;
+    height: 70px;
+    border-radius: 70px 70px 0 0;
+  }
+}
+
+/* Form inner styling */
+.enquire-form {
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  
+}
+
+.enquire-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #111b6a;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.enquire-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Input groups */
+.enquire-input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 170px;
+  margin-bottom: 0.6rem;
+}
+
+.enquire-input-group label {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.enquire-input-group input,
+.enquire-input-group textarea {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #eee;
+  border-radius: 30px;
+  font-size: 1rem;
+  background: #fafaff;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.enquire-input-group textarea {
+  border-radius: 16px;
+  min-height: 120px;
+  max-height: 250px;
+}
+
+.enquire-input-group input:focus,
+.enquire-input-group textarea:focus {
+  border-color: #2118ef;
+}
+
+.required {
+  color: #ec3636;
+  margin-left: 2px;
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.full-width {
+  flex: 1 1 100%;
+  margin-top: 1rem;
+}
+
+/* Submit button group and styling */
+.enquire-submit-group {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.enquire-submit-btn {
+  background: #2118ef;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: 0 2px 10px rgba(33,24,239,0.11);
+}
+
+.enquire-submit-btn:hover {
+  background: #120c7f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .enquire-row {
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+  .enquire-form {
+    padding: 1.2rem 0.6rem 0 0.6rem;
+  }
+  .enquire-input-group {
+    min-width: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .enquire-title {
+    font-size: 1.35rem;
+  }
+  .enquire-submit-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+}

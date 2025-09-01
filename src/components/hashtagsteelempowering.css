@@ -1,0 +1,130 @@
+/* =====================================
+   Empowering Section – Responsive Styles
+====================================== */
+
+.empowering-section {
+  width: 100%;
+  padding: 3rem 0 2.1rem 0;
+  background: #fff;
+}
+
+/* ------------ Title ------------ */
+.empowering-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #152243;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+  position: relative;
+}
+
+/* ------------ Underline below Title ------------ */
+.empowering-underline {
+  width: 65px;
+  height: 3.5px;
+  background: #2636d9;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ------------ Grid Layout for Cards ------------ */
+.empowering-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem auto 0;
+  max-width: 950px;
+}
+
+/* ------------ Individual Info Cards ------------ */
+.empowering-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  width: 100%;
+  background: #f7f9ff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(38, 54, 217, 0.06);
+  padding: 2.2rem 1.1rem 1.18rem 1.1rem;
+  min-height: 270px;
+  transition: box-shadow 0.14s;
+}
+.empowering-card:hover {
+  box-shadow: 0 8px 30px rgba(38, 54, 217, 0.09);
+}
+
+/* ------------ Map/Icon at Top of Card ------------ */
+.empowering-map {
+  margin-bottom: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------ State/Location Heading ------------ */
+.empowering-state {
+  color: #2636d9;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ------------ Description Text ------------ */
+.empowering-desc {
+  color: #353535;
+  font-size: 0.99rem;
+  line-height: 1.42;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ============= Tablet Responsive ============= */
+@media (max-width: 900px) {
+  .empowering-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.45rem;
+    margin-top: 2.4rem;
+  }
+  .empowering-card {
+    max-width: 340px;
+    width: 90vw;
+    min-height: 200px;
+    padding: 2rem 1.2rem 1.1rem 1.2rem;
+  }
+}
+
+/* ============= Mobile Responsive ============= */
+@media (max-width: 520px) {
+  .empowering-section {
+    padding: 1.2rem 0 1.2rem 0;
+  }
+  .empowering-title {
+    font-size: 1.19rem;
+    margin-bottom: 7px;
+  }
+  .empowering-underline {
+    width: 38px;
+    height: 2.5px;
+    margin-top: 5px;
+  }
+  .empowering-grid {
+    gap: 1.12rem;
+    margin-top: 1.25rem;
+  }
+  .empowering-card {
+    padding: 1.15rem 0.5rem 0.8rem 0.5rem;
+    max-width: 96vw;
+    min-height: 120px;
+    box-shadow: 0 1px 7px rgba(38, 54, 217, 0.08);
+  }
+  .empowering-state {
+    font-size: 0.97rem;
+  }
+  .empowering-desc {
+    font-size: 0.89rem;
+  }
+}

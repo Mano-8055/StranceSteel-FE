@@ -1,0 +1,97 @@
+.circle-slider-outer {
+  width: 270px;
+  height: 270px;
+  margin: 36px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-slider-rotator {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.circle-slider-thumb {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform-origin: center center;
+  transition: filter 0.4s;
+}
+.circle-slider-img {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 3px solid #2636d9;
+  background: #f8f6ff;
+  object-fit: cover;
+  box-shadow: 0 3px 16px rgba(38,54,217,0.13);
+  opacity: 0.7;
+  filter: grayscale(35%);
+  transition: filter 0.35s, opacity 0.38s;
+}
+.circle-slider-img.active {
+  opacity: 1;
+  filter: grayscale(0%);
+  border-color: #e14229;
+  box-shadow: 0 8px 24px rgba(225,66,41,0.11), 0 0 0 2px #fff;
+  z-index: 1;
+}
+
+.circle-slider-center {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2636d9 55%, #e14229 100%);
+  box-shadow: 0 14px 44px rgba(38,54,217,0.1);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+  border: 4px solid #fff;
+}
+.circle-slider-main-img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  background: #f9f9fa;
+  object-fit: cover;
+  box-shadow: 0 4px 17px rgba(38,54,217,0.13);
+  margin-bottom: 7px;
+}
+.circle-slider-name {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-shadow: 0 2px 11px rgba(30,24,24,0.085);
+}
+
+@media (max-width: 480px) {
+  .circle-slider-outer {
+    width: 86vw; height: 86vw; min-width: 150px; min-height: 150px; max-width: 99vw; max-height: 99vw;
+  }
+  .circle-slider-thumb .circle-slider-img {
+    width: 29px; height: 29px;
+  }
+  .circle-slider-center {
+    width: 67px; height: 67px;
+  }
+  .circle-slider-main-img {
+    width: 32px; height: 32px;
+    border-width: 1.4px;
+  }
+  .circle-slider-name {
+    font-size: 0.81rem;
+  }
+}

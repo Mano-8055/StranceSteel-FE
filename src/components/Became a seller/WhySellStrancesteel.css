@@ -1,0 +1,84 @@
+.whysell {
+  background: #f7fafe;
+  padding: 2.5rem 1rem 3.2rem 1rem;
+  box-sizing: border-box;
+}
+
+.whysell-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #152243;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.whysell-subtitle {
+  text-align: center;
+  color: #6f728c;
+  font-size: 1.15rem;
+  margin-bottom: 2.7rem;
+  font-weight: 500;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(38, 54, 217, 0.07);
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.13s;
+  min-height: 220px;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 32px rgba(38, 54, 217, 0.11);
+}
+
+.feature-icon {
+  font-size: 2.3rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #2636d9;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.feature-desc {
+  color: #232336;
+  font-size: 1.03rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  .features-grid { grid-template-columns: 1fr 1fr; gap: 1.6rem; }
+}
+@media (max-width: 650px) {
+  .features-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .whysell { padding: 1.3rem 0.39rem 2.3rem 0.39rem; }
+  .whysell-title { font-size: 1.27rem; }
+  .whysell-subtitle { font-size: 0.99rem; }
+  .feature-card { padding: 1.2rem 0.6rem 1rem 0.6rem; min-height: 150px;}
+  .feature-icon { font-size: 1.5rem; }
+  .feature-title { font-size: 1.01rem; }
+  .feature-desc { font-size: 0.98rem; }
+}

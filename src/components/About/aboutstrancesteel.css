@@ -1,0 +1,138 @@
+/* =========================
+   ABOUT HASHTAG STEEL SECTION
+========================= */
+
+/* Outer Container */
+.hashtagsteel-about {
+  width: 100%;
+  background: #fff;
+  padding: 3rem 2.2rem 2.2rem;
+  box-sizing: border-box;
+}
+
+/* Main Row Layout */
+.hashtagsteel-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+/* Left Column – Info Text */
+.hashtagsteel-info {
+  flex: 1 1 450px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hashtagsteel-info h2 {
+  font-size: 2.05rem;
+  color: #1a2351;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  line-height: 1.25;
+}
+
+.hashtagsteel-title-emph {
+  color: #2636d9;
+  border-bottom: 3.5px solid #2636d9;
+  padding-bottom: 2px;
+}
+
+.hashtagsteel-info p {
+  font-size: 1.14rem;
+  color: #323232;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Call-to-Action Link */
+.hashtagsteel-cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #2636d9;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.hashtagsteel-cta:hover {
+  color: #162091;
+}
+
+/* Right Column – Image / Art */
+.hashtagsteel-art {
+  flex: 1 1 325px;
+  max-width: 420px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-width: 210px;
+}
+
+.hashtagsteel-art img {
+  max-width: 370px;
+  width: 100%;
+  height: auto;
+  border-radius: 13px;
+  box-shadow: 0 5px 22px rgba(38, 54, 217, 0.09);
+  display: block;
+  background: #fafbff;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet & Small Desktop */
+@media (max-width: 950px) {
+  .hashtagsteel-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    text-align: center;
+  }
+  .hashtagsteel-art {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  .hashtagsteel-art img {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hashtagsteel-about {
+    padding: 1.2rem 0.32rem 1.18rem;
+  }
+  .hashtagsteel-info h2 {
+    font-size: 1.14rem;
+    margin-bottom: 0.74rem;
+  }
+  .hashtagsteel-info p {
+    font-size: 0.98rem;
+  }
+  .hashtagsteel-art img {
+    max-width: 96vw;
+    margin-top: 0.6rem;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 410px) {
+  .hashtagsteel-info h2 {
+    font-size: 0.93rem;
+  }
+  .hashtagsteel-info p {
+    font-size: 0.9rem;
+  }
+}

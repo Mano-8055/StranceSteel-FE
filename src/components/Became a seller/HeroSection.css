@@ -1,0 +1,145 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+  background: #f6f8ff;
+  min-height: 480px;
+  gap: 2.5rem;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  flex: 1 1 420px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 2.15rem;
+  color: #101140;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1.12rem;
+}
+
+.hero-title-accent {
+  color: #2636d9;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  color: #6f728c;
+  font-size: 1.11rem;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.hero-btn {
+  min-width: 128px;
+  font-size: 1.12rem;
+  padding: 0.84rem 2.4rem;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.16s;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 10px rgba(38,54,217,0.07);
+}
+.hero-btn.primary {
+  background-color: #2636d9;
+  color: #fff;
+  border: none;
+}
+.hero-btn.primary:hover {
+  background: #192273;
+}
+.hero-btn.outline {
+  background: #fff;
+  color: #2636d9;
+  border: 2px solid #2636d9;
+  box-shadow: none;
+}
+.hero-btn.outline:hover {
+  background: #2636d9;
+  color: #fff;
+}
+
+/* Right side image */
+.hero-right {
+  flex: 1 1 480px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-right img {
+  max-width: 98%;
+  width: 450px;
+  min-width: 200px;
+  height: auto;
+  display: block;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 22px rgba(38,54,217,0.07);
+}
+
+/* -------------- RESPONSIVE BREAKPOINTS -------------- */
+
+/* Tablet (≤ 992px) */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 2.1rem 1rem;
+    gap: 2.2rem;
+    min-height: unset;
+    text-align: center;
+  }
+  .hero-left, .hero-right {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-right img {
+    width: 350px;
+    min-width: 120px;
+  }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 1rem 0.15rem;
+    gap: 1.2rem;
+  }
+  .hero-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+  .hero-subtitle {
+    font-size: 0.96rem;
+    margin-bottom: 1.15rem;
+  }
+  .hero-btn {
+    min-width: 90px;
+    font-size: 0.97rem;
+    padding: 0.7rem 1.4rem;
+  }
+  .hero-actions {
+    gap: 0.55rem;
+  }
+  .hero-right img {
+    width: 220px;
+    min-width: 80px;
+    border-radius: 11px;
+  }
+}

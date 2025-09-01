@@ -1,0 +1,139 @@
+.vstepper-root {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 1rem 0.5rem;
+  background: #fcfdff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+}
+
+.vstepper-title {
+  text-align: center;
+  color: #142270;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+
+.vstepper-desc {
+  text-align: center;
+  color: #3d4292;
+  font-size: 1.12rem;
+  margin-bottom: 2.4rem;
+}
+
+.vstepper-timeline {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+  min-height: 440px;
+}
+
+.vstepper-line {
+  position: relative;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+}
+.vstepper-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(#e7edfd,#223db7 77%,#e7edfd);
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* The dot */
+.vstepper-red-dot {
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: #e34949;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 14px rgba(213,53,53,0.16);
+  transform: translate(-50%, 0);
+  z-index: 3;
+  transition: top 0.35s cubic-bezier(.68,.09,.26,1.21), box-shadow .18s;
+}
+
+/* Step content */
+.vstepper-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.9rem;
+  margin-left: 0.65rem;
+}
+
+.vstepper-step {
+  display: flex;
+  align-items: flex-start;
+  transition: background 0.15s;
+}
+
+.vstepper-step.active .vstepper-icon {
+  background: #2636d9;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(32, 58, 226, 0.13);
+}
+
+.vstepper-icon {
+  width: 44px;
+  height: 44px;
+  background: #f0f1fa;
+  border-radius: 50%;
+  font-size: 1.61rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.25rem;
+  color: #2538a6;
+  align-self: flex-start;
+  box-shadow: 0 1px 4px rgba(52,54,150,0.07);
+  transition: background 0.14s, color 0.14s, box-shadow 0.17s;
+}
+
+.vstepper-step-content h4 {
+  color: #1e2354;
+  font-size: 1.17rem;
+  font-weight: 700;
+  margin-bottom: 0.32rem;
+}
+.vstepper-step-content p {
+  color: #474869;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* -------------- Responsive -------------- */
+@media (max-width: 800px) {
+  .vstepper-root {
+    padding: 0.8rem 0;
+    border-radius: 14px;
+  }
+  .vstepper-timeline { min-height: 330px; }
+  .vstepper-line { width: 28px; }
+  .vstepper-red-dot { width: 19px; height: 19px; }
+  .vstepper-icon { width: 34px; height: 34px; font-size: 1.23rem; }
+  .vstepper-step-content h4 { font-size: 1.01rem; }
+  .vstepper-steps { gap: 1.8rem; }
+}
+@media (max-width: 540px) {
+  .vstepper-root { margin: 0.5rem 0.1rem; }
+  .vstepper-title { font-size: 1.11rem; }
+  .vstepper-desc { font-size: .89rem; margin-bottom: 1.2rem;}
+  .vstepper-steps { gap: 1.02rem; }
+  .vstepper-step-content h4 { font-size: 0.93rem; }
+  .vstepper-line { width: 18px;}
+  .vstepper-red-dot { width: 12px; height: 12px; }
+  .vstepper-icon { width: 21px; height: 21px; font-size: 0.81rem;}
+}

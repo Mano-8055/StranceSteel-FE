@@ -1,0 +1,133 @@
+.register-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(96deg, #f7f8fe 60%, #e5eefe 100%);
+  padding: 2.4rem 2.2rem 2.4rem 2.2rem;
+  box-sizing: border-box;
+  min-height: 430px;
+  gap: 2.5rem;
+}
+
+/* Left side text */
+.register-hero-content {
+  flex: 1 1 410px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-hero-title {
+  font-size: 2.1rem;
+  color: #23316c;
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.01em;
+  line-height: 1.16;
+}
+.register-hero-title span {
+  color: #2118ef;
+  font-weight: 800;
+}
+
+.register-hero-subtitle {
+  font-size: 1.17rem;
+  color: #364279;
+  margin-bottom: 2.18rem;
+}
+
+.register-hero-btn {
+  display: inline-block;
+  background: #2118ef;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.16rem;
+  font-weight: 600;
+  padding: 0.9rem 2.4rem;
+  border-radius: 23px;
+  box-shadow: 0 2px 14px rgba(33,24,239,0.11);
+  transition: background 0.18s;
+  margin-bottom: 1.22rem;
+  letter-spacing: 0.01em;
+}
+.register-hero-btn:hover,
+.register-hero-btn:focus {
+  background: #121184;
+}
+
+.register-hero-footnote {
+  color: #585976;
+  font-size: 1.02rem;
+}
+.register-hero-footnote span {
+  color: #1b2183;
+  font-size: 0.99em;
+  opacity: 0.94;
+}
+
+/* Right side image */
+.register-hero-image {
+  flex: 1 1 450px;
+  max-width: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.register-hero-image img {
+  max-width: 100%;
+  width: 370px;
+  min-width: 180px;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 4px 28px rgba(33, 24, 239, 0.05);
+  background: #fff;
+}
+
+/* Tablet - stack vertical */
+@media (max-width: 960px) {
+  .register-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 2rem 1.1rem;
+    min-height: unset;
+    text-align: center;
+  }
+  .register-hero-content, .register-hero-image {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .register-hero-image img {
+    width: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-hero {
+    padding: 1rem 0.22rem 1.4rem 0.22rem;
+    gap: 1rem;
+  }
+  .register-hero-title {
+    font-size: 1.12rem;
+    margin-bottom: 0.42rem;
+  }
+  .register-hero-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 1.1rem;
+  }
+  .register-hero-btn {
+    font-size: 0.97rem;
+    padding: 0.65rem 1.25rem;
+    margin-bottom: 0.7rem;
+  }
+  .register-hero-image img {
+    width: 180px;
+    border-radius: 8px;
+  }
+  .register-hero-footnote {
+    font-size: 0.93rem;
+  }
+}

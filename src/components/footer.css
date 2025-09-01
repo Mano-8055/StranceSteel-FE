@@ -1,0 +1,272 @@
+/* ==============================
+   MAIN FOOTER STYLES
+============================== */
+.main-footer {
+  background: linear-gradient(180deg, #0e1665 0%, #2636d9 100%);
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  /* margin-top: 2rem; */
+}
+
+/* ---- Top Row Layout ---- */
+.main-footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 2fr;
+  gap: 2rem 1.4rem;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.col-1 { min-width: 210px; }
+
+/* ---- Links ---- */
+.col-2 ul,
+.col-3 ul {
+  padding: 0;
+  list-style: none;
+  color: #e6eafd;
+  line-height: 2.22;
+  font-size: 1.01rem;
+}
+.col-2 ul li,
+.col-3 ul li {
+  margin: 0;
+}
+.col-2 ul a,
+.col-3 ul a {
+  color: #f9fcff;
+  text-decoration: none;
+  transition: color 0.14s;
+  opacity: 0.9;
+}
+.col-2 ul a:hover,
+.col-3 ul a:hover {
+  color: #ffc635;
+  opacity: 1;
+}
+
+/* ---- Branding & Contact ---- */
+.footer-logo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.footer-logo-icon {
+  border-radius: 8px;
+  padding: 2px 10px 2px 8px;
+  background: #fff;
+  color: #2636d9;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.footer-logo-text {
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.footer-address,
+.footer-contact {
+  font-size: 0.97rem;
+  color: #dbeaff;
+  line-height: 1.7;
+}
+.footer-link {
+  color: #ffec60;
+  text-decoration: underline;
+}
+
+/* ---- Social Icons ---- */
+.footer-socials {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.37rem;
+}
+.footer-social {
+  display: inline-flex;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+.footer-social:hover {
+  background: #fff2;
+  transform: scale(1.12);
+}
+.footer-social svg {
+  display: block;
+}
+
+/* ---- App Store Buttons ---- */
+.footer-apps {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+/* First image (Google Play) */
+.googleplay-img {
+  height: 150px;
+  width: 200px;
+  border-radius: 9px;
+  background: transparent;
+  transition: box-shadow 0.13s, transform 0.13s;
+}
+.googleplay-img:hover {
+  box-shadow: 0 7px 22px rgba(39,57,166,0.09);
+  transform: scale(1.04);
+}
+
+/* Second image (App Store) */
+.appstore-img {
+  margin-top: 45px;
+  height: 58px;
+  width: 180px;
+  border-radius: 9px;
+  background: transparent;
+  transition: box-shadow 0.13s, transform 0.13s;
+}
+.appstore-img:hover {
+  box-shadow: 0 7px 22px rgba(39,57,166,0.09);
+  transform: scale(1.04);
+}
+
+
+/* ---- Newsletter ---- */
+.footer-newsletter-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.61em;
+}
+.footer-newsletter-caption {
+  font-size: 0.99rem;
+  opacity: 0.88;
+  color: #f9f9ff;
+  margin-bottom: 0.38em;
+}
+.footer-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.59rem;
+  width: 100%;
+}
+.footer-newsletter-form input {
+  padding: 0.68em 1.1em;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  font-size: 0.98rem;
+  background: #e8eafd;
+  color: #0b1565;
+  transition: background 0.16s;
+}
+.footer-newsletter-form input::placeholder {
+  color: #b2b9d9;
+}
+.footer-newsletter-form button {
+  background: #2636d9;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.65em 0.2em;
+  border-radius: 21px;
+  font-size: 1.03rem;
+  margin-top: 0.17em;
+  cursor: pointer;
+  transition: background 0.17s;
+}
+.footer-newsletter-form button:hover {
+  background: #192273;
+}
+
+/* ---- Bottom Row ---- */
+.main-footer-bottom {
+  max-width: 1170px;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #d6dbff;
+  font-size: 0.98rem;
+  opacity: 0.72;
+}
+.footer-legal-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #fce089;
+  margin-right: 0.47em;
+  transition: color 0.15s;
+}
+.footer-legal-link:hover {
+  color: #ffc635;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+=========================== */
+
+/* Large Tablet */
+@media (max-width: 950px) {
+  .main-footer-content {
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 1.4rem 0.7rem;
+  }
+  .col-3 {
+    display: none;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 720px) {
+  .main-footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2rem 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .main-footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+    padding: 0 0.55rem;
+  }
+  .footer-column { min-width: 0; }
+  .footer-apps { gap: 0.4rem; }
+}
+
+/* Very Small Mobile */
+@media (max-width: 520px) {
+  .main-footer {
+    font-size: 0.98rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .main-footer-content {
+    gap: 1.02rem;
+    padding: 0 0.16rem;
+  }
+  .footer-logo {
+    font-size: 1.19rem;
+  }
+  .footer-contact {
+    font-size: 0.93rem;
+  }
+  .main-footer-bottom {
+    flex-direction: column;
+    padding: 0 0.17rem;
+    font-size: 0.92rem;
+    margin-top: 1.1rem;
+    gap: 2px;
+    align-items: flex-start;
+  }
+}

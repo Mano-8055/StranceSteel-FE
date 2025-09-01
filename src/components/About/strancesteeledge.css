@@ -1,0 +1,116 @@
+.strancesteel-edge-section {
+  background: #fff;
+  padding: 2.7rem 1.1rem 2.5rem 1.1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.strancesteel-edge-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2458;
+  margin-bottom: 0.4em;
+  letter-spacing: 0.01rem;
+  position: relative;
+}
+.strancesteel-edge-underline {
+  width: 78px;
+  height: 3.5px;
+  background: #2636d9;
+  margin: 0.9em auto 0;
+  border-radius: 2.5px;
+}
+
+.strancesteel-edge-grid {
+  display: flex;
+  gap: 2.1rem;
+  justify-content: center;
+  margin: 2.5rem auto 0 auto;
+  max-width: 1050px;
+  flex-wrap: wrap;
+}
+
+.strancesteel-edge-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 18px rgba(40,50,80,0.09);
+  flex: 1 1 270px;
+  max-width: 340px;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.2rem 1.1rem 1.8rem 1.1rem;
+  text-align: center;
+  transition: box-shadow 0.17s, transform 0.14s;
+}
+.strancesteel-edge-card:hover {
+  box-shadow: 0 10px 30px rgba(38,54,217,0.11);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.strancesteel-edge-icon {
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+}
+
+.strancesteel-edge-card-title {
+  font-size: 1.17rem;
+  color: #1a2458;
+  font-weight: 600;
+  margin-bottom: 0.65em;
+  letter-spacing: 0.01em;
+}
+
+.strancesteel-edge-card-desc {
+  color: #373737;
+  font-size: 0.99rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+@media (max-width: 950px) {
+  .strancesteel-edge-grid {
+    gap: 1.25rem;
+  }
+  .strancesteel-edge-card {
+    padding: 1.35rem 0.7rem 1.25rem 0.7rem;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .strancesteel-edge-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    margin-top: 2rem;
+  }
+  .strancesteel-edge-card {
+    min-width: 0;
+    width: 97vw;
+    max-width: 440px;
+  }
+  .strancesteel-edge-title {
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .strancesteel-edge-section {
+    padding: 1.2rem 0.09rem 1.2rem 0.09rem;
+  }
+  .strancesteel-edge-title {
+    font-size: 0.97rem;
+  }
+  .strancesteel-edge-card-title {
+    font-size: 1rem;
+  }
+  .strancesteel-edge-card-desc {
+    font-size: 0.93rem;
+  }
+}

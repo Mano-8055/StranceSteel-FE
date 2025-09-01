@@ -1,0 +1,148 @@
+/* ======== RESET & BASE ======== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden; /* ✅ prevents horizontal scroll */
+}
+
+/* Ensure images don’t overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ======== NAVBAR ======== */
+nav {
+  width: 100%;
+  background: #fff;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: sticky; /* Sticks to top on scroll */
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+nav img {
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+/* ======== BANNER ======== */
+.banner {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden; /* ✅ avoid background overflow */
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f2f2f2;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 1100px) {
+  nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  nav ul {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    max-width: 100%;   /* ✅ prevents horizontal overflow */
+    overflow-x: hidden;
+    display: none; /* Hidden by default - toggled by JS */
+    padding: 1rem;
+    box-shadow: -2px 2px 8px rgba(0,0,0,0.08);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 250px;
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ======== OPTIONAL ======== */
+/* Divider style for small screens */
+.divider {
+  margin: 0 6px;
+  color: #ccc;
+}

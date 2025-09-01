@@ -1,0 +1,171 @@
+/* =============================
+   BRAND SECTION — Responsive Layout
+============================= */
+
+.brand-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  background: #fafbff;
+  min-height: 470px;
+  box-sizing: border-box;
+}
+
+/* ---- Brand Info Content ---- */
+.brand-content {
+  flex: 1 1 360px;
+  max-width: 440px;
+  margin-right: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.brand-caption {
+  color: #2636d9;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.brand-content h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.brand-strong {
+  display: block;
+  color: #2636d9;
+}
+
+.brand-desc {
+  color: #333;
+  font-size: 1.08rem;
+  margin-bottom: 1.7rem;
+  line-height: 1.6;
+}
+
+.brand-cta {
+  background: #2636d9;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.15s;
+}
+
+.brand-cta:hover {
+  background: #1724a6;
+}
+
+/* ---- Brand Logos Grid ---- */
+.brand-logos {
+  flex: 2 1 580px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60, 70, 110, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 8px 14px;
+  min-height: 82px;
+  height: 98px;
+  transition: transform 0.13s, box-shadow 0.13s;
+}
+
+.brand-logo-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(38, 54, 217, 0.12);
+}
+
+.brand-logo-card img {
+  max-height: 50px;
+  max-width: 110px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  filter: grayscale(15%);
+}
+
+/* =============================
+   RESPONSIVE BREAKPOINTS
+============================= */
+
+/* Large Tablet */
+@media (max-width: 1200px) {
+  .brand-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet and Small Desktop */
+@media (max-width: 900px) {
+  .brand-section {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+    min-height: unset;
+    box-sizing: border-box;
+  }
+  .brand-content {
+    margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+/* Mobile Portrait - Less than 700px */
+@media (max-width: 700px) {
+  .brand-logos {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 10px;
+  }
+  .brand-content h2 {
+    font-size: 1.38rem;
+  }
+}
+
+/* Small Mobile Portrait - Less than 480px */
+@media (max-width: 480px) {
+  .brand-section {
+    padding: 1rem 0.15rem;
+    gap: 1rem;
+  }
+  .brand-logos {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 8px;
+  }
+  .brand-content {
+    font-size: 0.93rem;
+    max-width: 96vw;
+  }
+  .brand-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .brand-desc {
+      font-size: 1rem;
+  }
+}
