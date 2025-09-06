@@ -10,7 +10,7 @@
 
 
 import React from "react";
-import "./styles.css";
+import "./app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import all page components
