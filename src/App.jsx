@@ -8,12 +8,14 @@ import AboutUs from "./pages/AboutUs";
 import Enquiry from "./pages/Enquiry";
 import Blog from "./pages/Blog";
 import BecomeSeller from "./pages/BecomeSeller";
+import ProductDetails from "./pages/product/ProductDetails";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/product" element={<ProductDetails/>}/>
         <Route path="/about" element={<AboutUs />} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/blog" element={<Blog />} />

@@ -15,6 +15,7 @@ import msrodImg from "../assets/Images/msrod.jpeg";
 import rsjoistsImg from "../assets/Images/joists.png";
 import colourcoatedImg from "../assets/Images/colorcoil.png";
 import mspipeImg from "../assets/Images/pipes.png";
+import { Link } from "react-router-dom";
 
 const products = [
   { name: "TMT", price: "₹ 45,500 / MT Onwards *", image: tmtImg },
@@ -41,15 +42,17 @@ function ProductGrid() {
       <div className="underline"></div>
       <div className="product-grid">
         {products.map((item, index) => (
-          
-          <div key={index} className="product-item">
-            <img src={item.image} alt={item.name} />
-            <div className="product-info">
-              <h4>{item.name}</h4>
-              <p>{item.price}</p>
+          <Link to={'/product'}>
+            <div key={index} className="product-item">
+              <img src={item.image} alt={item.name} />
+              <div className="product-info">
+                <h4>{item.name}</h4>
+                <p>{item.price}</p>
+              </div>
             </div>
-          </div>          
-          
+          </Link>
+
+
         ))}
       </div>
     </section>
@@ -67,7 +70,7 @@ export default ProductGrid;
 // // ... all your image imports ...
 
 // const products = [
-//   // Add a unique ID for each product. 
+//   // Add a unique ID for each product.
 //   // This ID will be used in the URL.
 //   { id: 'tmt', name: "TMT", price: "₹ 45,500 / MT Onwards *", image: tmtImg },
 //   { id: 'hot-rolled', name: "Hot Rolled", price: "₹ 51,000 / MT Onwards *", image: hotRolledImg },
