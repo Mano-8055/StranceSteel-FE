@@ -6,21 +6,17 @@ import LandingPage from "../../components/product/ProductCard"
 import ProductList from "../../components/product/ProductList"
 import ProductCard from "../../components/product/ProductCard"
 
-export default function ProductDetails(){
-  return(
+export default function ProductDetails() {
+  return (
     <>
       <Navbar />
-      <main style={{ padding: "2rem" ,color:"transparent"}}>
+      <main style={{ padding: "2rem", color: "transparent" }}>
         <h2>Our Blog</h2>
         <p>
           Stay updated with the latest trends, insights, and stories from the steel industry and supply chain.
         </p>
       </main>
       <ProductList />
-      
-
-      
-      
       <Footer />
     </>
   )
